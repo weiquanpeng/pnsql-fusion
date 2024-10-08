@@ -1,0 +1,5 @@
+{"level":"ERROR","time":"2024-07-29 12:24:42","msg":"测试报错"}
+{"level":"ERROR","time":"2024-07-29 12:27:19","msg":"mysql 连接报错{error 26 0  dial tcp 127.0.0.12:3306: connect: operation timed out}"}
+{"level":"ERROR","time":"2024-07-29 14:41:34","msg":"测试报错"}
+{"level":"ERROR","time":"2024-07-29 14:43:33","msg":"测试报错"}
+{"level":"ERROR","time":"2024-07-29 14:59:25","msg":"测试报错"}
