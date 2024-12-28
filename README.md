@@ -7,8 +7,8 @@ pnsql全能平台，由研发爱好者peng自研开发
 
 
 ## Web Installation
-pnpm install
-pnpm run serve
+npm install
+npm run serve
 
 
 ## Pnsql Installation
