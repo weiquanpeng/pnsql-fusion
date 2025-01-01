@@ -1,5 +1,5 @@
 ## Project Name
-pnsql-server1
+pnsql-server
 
 
 ## Overview
