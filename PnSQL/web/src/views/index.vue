@@ -6,7 +6,7 @@
         <el-aside class="pwq-sidebar" style="width:150px"><PageSidebar/></el-aside>
         <el-main class="pwq-main">
           <page-menu-tab></page-menu-tab>
-          <page-main></page-main>
+          <page-main class="page-main-content"></page-main>
         </el-main>
       </el-container>
     </el-container>
@@ -38,5 +38,6 @@ import PageSidebar from '@/views/video/PageSidebar.vue';
   height: calc(100vh - 70px);
   border-top: 3px solid var(--color-neutral-2)
 }
+
 
 </style>
