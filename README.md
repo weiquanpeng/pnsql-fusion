@@ -1,9 +1,9 @@
 ## Project Name
-pnsql-server
+pnsql-server1
 
 
 ## Overview
-pnsql全能平台，由研发爱好者peng自研开发
+pnsql 全能平台，由研发爱好者peng自研开发
 
 
 ## Web Installation
