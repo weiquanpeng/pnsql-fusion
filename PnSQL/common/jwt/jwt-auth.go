@@ -29,7 +29,7 @@ func JwtAuth() gin.HandlerFunc {
 		myJwt := NewJWT()
 		claims, err := myJwt.ParseToken(token)
 		if err != nil {
-			response.FailWithMessage("token 失效", c)
+			response.FailWithData(801, "token 失效", c)
 			c.Abort()
 			return
 		}

@@ -22,20 +22,26 @@ instance.interceptors.request.use(function (config) {
 
 // 添加响应拦截器
 instance.interceptors.response.use(function (response) {
-    if (response.headers['PanGu-token']){
-        const useStore = useCounterStore()
-        useStore.setToken(response.headers['PanGu-token'])
+    const useStore = useCounterStore();
+    // 检查并设置 token
+    if (response.headers['PanGu-token']) {
+        useStore.setToken(response.headers['PanGu-token']);
     }
-    if (response.data.code===200){
+
+    // 检查返回的状态码
+    if (response.data.code === 200) {
         return response.data;
-    }else {
-        if (response.data.msg){
-            ElMessage({message:response.data.msg,type:"error",showClose:true})
+    } else if (response.data.code === 801) {
+        useStore.toLogout()
+        ElMessage({message: response.data.msg, type: "error", showClose: true});
+        return Promise.reject(response.data);
+    } else {
+        if (response.data.msg) {
+            ElMessage({message: response.data.msg, type: "error", showClose: true});
         }
-        return Promise.reject(response.data)
-        // return response.data
+        return Promise.reject(response.data);
     }
-}, (err) => {
+}, function (err) {
     if (err && err.response) {
         switch (err.response.status) {
             case 400:
@@ -73,8 +79,9 @@ instance.interceptors.response.use(function (response) {
                 break;
             default:
         }
+
         if (err.message) {
-            ElMessage({message:err.message,type:"error",showClose:true})
+            ElMessage({message: err.message, type: "error", showClose: true});
         }
     }
     return Promise.reject(err);
