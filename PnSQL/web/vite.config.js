@@ -21,9 +21,10 @@ export default defineConfig(({ command, mode }) => {
             })
         ],
         server:{
-            // 如果使用docker-compose开发模式，设置为false
+            // 服务启动网页自动打开，如果使用docker-compose开发模式，设置为false
             open: true,
             port: env.VITE_CLI_PORT,
+            host: '0.0.0.0'
             // proxy: {
             //     [env.VITE_BASE_API]: { // 需要代理的路径   例如 '/api'
             //         target: `${env.VITE_BASE_PATH}/`, // 代理到 目标路径

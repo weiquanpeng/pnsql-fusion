@@ -13,7 +13,7 @@ type Response struct {
 }
 
 const (
-	ERROR   = 801
+	ERROR   = 800
 	SUCCESS = 200
 )
 
@@ -51,7 +51,7 @@ func FailWithMessage(message string, c *gin.Context) {
 }
 
 func FailWithData(e int, data interface{}, c *gin.Context) {
-	Result(ERROR, data, "操作失败", c)
+	Result(e, data, "操作失败", c)
 }
 
 func FailWithDecide(data interface{}, message string, c *gin.Context) {

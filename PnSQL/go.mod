@@ -5,7 +5,6 @@ go 1.22
 require (
 	github.com/dgrijalva/jwt-go v3.2.0+incompatible
 	github.com/gin-gonic/gin v1.10.0
-	github.com/gookit/validate v1.5.2
 	github.com/mojocn/base64Captcha v1.3.6
 	github.com/spf13/viper v1.19.0
 	go.uber.org/zap v1.27.0
@@ -30,8 +29,6 @@ require (
 	github.com/go-sql-driver/mysql v1.8.1 // indirect
 	github.com/goccy/go-json v0.10.3 // indirect
 	github.com/golang/freetype v0.0.0-20170609003504-e2365dfdc4a0 // indirect
-	github.com/gookit/filter v1.2.1 // indirect
-	github.com/gookit/goutil v0.6.15 // indirect
 	github.com/hashicorp/hcl v1.0.0 // indirect
 	github.com/jinzhu/inflection v1.0.0 // indirect
 	github.com/jinzhu/now v1.1.5 // indirect

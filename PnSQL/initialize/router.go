@@ -21,6 +21,7 @@ func InitRouter(args map[string]string) {
 	PublicGroup := r.Group("/api/v1/public")
 	{
 		systemRouter.InitLoginRouter(PublicGroup)
+		systemRouter.InitLogoutRouter(PublicGroup)
 		exampleRouter.InitSysMenusRouter(PublicGroup)
 	}
 
@@ -28,7 +29,6 @@ func InitRouter(args map[string]string) {
 	PrivateGroup := r.Group("/api/v1/")
 	PrivateGroup.Use(jwt.JwtAuth())
 	{
-		systemRouter.InitLogoutRouter(PrivateGroup)
 		exampleRouter.InitSysUserRouter(PrivateGroup)
 		exampleRouter.InitSysRolesRouter(PrivateGroup)
 	}

@@ -26,8 +26,7 @@
         element-loading-text="加载中..."
         element-loading-background="rgba(255, 255, 255, 0.1)"
     >
-      <el-table-column type="selection" fixed="left" />
-      <el-table-column fixed prop="account" label="用户"  align="center" width="100" />
+      <el-table-column fixed prop="account" label="用户"  align="center" width="200"/>
       <el-table-column label="是否启用"  align="center" width="300px">
         <template #default="status">
           <el-switch v-model="status.row.enable" :active-value="1" :inactive-value="2" active-text="启用" size="small" @change="statusEnable(status.row, status.row.enable)"/>
