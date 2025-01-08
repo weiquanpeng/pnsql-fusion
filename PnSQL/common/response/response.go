@@ -50,8 +50,8 @@ func FailWithMessage(message string, c *gin.Context) {
 	Result(ERROR, map[string]interface{}{}, message, c)
 }
 
-func FailWithData(e int, data interface{}, c *gin.Context) {
-	Result(e, data, "操作失败", c)
+func FailWithData(e int, data interface{}, message string, c *gin.Context) {
+	Result(e, data, message, c)
 }
 
 func FailWithDecide(data interface{}, message string, c *gin.Context) {

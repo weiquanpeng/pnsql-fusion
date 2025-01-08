@@ -43,11 +43,11 @@ func (l *Login) ToLogin(c *gin.Context) {
 	}
 
 	//校验验证码
-	verify := store.Verify(param.Id, param.Code, true)
-	if !verify {
-		response.FailWithMessage("验证码错误", c)
-		return
-	}
+	//verify := store.Verify(param.Id, param.Code, true)
+	//if !verify {
+	//	response.FailWithMessage("验证码错误", c)
+	//	return
+	//}
 
 	token := funcJwt(c, param)
 	judgeUser, err := exampleLogin.SysUserService.GetSysUsersAccount(param.Username)
@@ -77,7 +77,7 @@ func (l *Login) ToLogin(c *gin.Context) {
 
 func funcJwt(c *gin.Context, param LoginParam) string {
 	var bf, _ = utils.ParseDuration("2d") //token 缓存时间
-	var ep, _ = utils.ParseDuration("7d") //token过期时间
+	var ep, _ = utils.ParseDuration("3d") //token过期时间
 
 	jwt := jwtgo.NewJWT()
 	//生成 token
