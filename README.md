@@ -19,9 +19,10 @@ go mod download
 ```
 
 ## Systemctl
-mkdir /pnsql
 
 ```
+mkdir /pnsql
+
 sh -c 'cat <<EOF > /etc/systemd/system/pnsql-web.service
 [Unit]
 Description=PnSql Web Service
