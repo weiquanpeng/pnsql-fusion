@@ -19,6 +19,7 @@ go mod download
 ## Systemctl
 mkdir /pnsql
 
+```
 sh -c 'cat <<EOF > /etc/systemd/system/pnsql-web.service
 [Unit]
 Description=PnSql Web Service
@@ -32,7 +33,9 @@ SyslogIdentifier=pnsql-web
 [Install]
 WantedBy=multi-user.target
 EOF'
+```
 
+```
 sh -c 'cat <<EOF > /etc/systemd/system/pnsql-server.service
 [Unit]
 Description=PnSql Server Service
@@ -46,8 +49,13 @@ SyslogIdentifier=pnsql-server
 [Install]
 WantedBy=multi-user.target
 EOF'
+```
+
 
 ## run
+
+```
 systemctl daemon-reload
 systemctl start pnsql-web.service
 systemctl start pnsql-server.service
+```
