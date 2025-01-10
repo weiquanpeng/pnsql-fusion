@@ -10,11 +10,13 @@ pnsql 全能平台，由研发爱好者peng自研开发
 npm install
 
 ## Pnsql Installation
+
+```
 go env -w GO111MODULE=on
 go env -w GOPROXY=https://goproxy.cn,direct
 go mod tidy
 go mod download
-
+```
 
 ## Systemctl
 mkdir /pnsql
