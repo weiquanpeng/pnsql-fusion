@@ -5,7 +5,11 @@ pnsql-server
 pnsql 全能平台，由研发爱好者peng自研开发
 
 ## Web Installation
+```
+npm config set registry=https://registry.npmmirror.com 
 npm install
+npm run prod
+```
 
 ## Pnsql Installation
 ```
