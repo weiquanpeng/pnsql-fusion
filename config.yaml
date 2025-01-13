@@ -1,0 +1,13 @@
+zap:
+  level: debug
+system:
+  port: 2379
+  #  路由全局前缀
+  router-prefix: ""
+mysql:
+  host: "127.0.0.1"
+  port: "3306"
+  dbname: "gin_server"
+  username: "pengweiquan"
+  password: "123123"
+  config: "charset=utf8mb4&parseTime=True&loc=Local"
