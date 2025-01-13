@@ -8,17 +8,22 @@ pnsql 全能平台，由研发爱好者peng自研开发
 npm install
 
 ## Pnsql Installation
+```
 go env -w GO111MODULE=on
 go env -w GOPROXY=https://goproxy.cn,direct
 go mod tidy
 go mod download
+```
 
 ## config
+```
 mkdir /pnsql
 cd /pnsql/go-project/PnSQL && go build -o pnsql main.go
 sed -i "s|VITE_BASE_PATH= http://127.0.0.1:2379|VITE_BASE_PATH= http://8.153.100.186:2379|" .env.production
+```
 
 ## Systemctl
+```
 sh -c 'cat <<EOF > /etc/systemd/system/pnsql-web.service
 [Unit]
 Description=PnSql Web Service
@@ -32,7 +37,9 @@ SyslogIdentifier=pnsql-web
 [Install]
 WantedBy=multi-user.target
 EOF'
+```
 
+```
 sh -c 'cat <<EOF > /etc/systemd/system/pnsql-server.service
 [Unit]
 Description=PnSql Server Service
@@ -46,8 +53,11 @@ SyslogIdentifier=pnsql-server
 [Install]
 WantedBy=multi-user.target
 EOF'
+```
 
 ## run
+```
 systemctl daemon-reload
 systemctl start pnsql-web.service
 systemctl start pnsql-server.service
+```
