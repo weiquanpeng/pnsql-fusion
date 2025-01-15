@@ -41,25 +41,25 @@
       </el-table-column>
       <el-table-column fixed="right" label="操作" align="center">
         <template #default="{ row }">
-        <el-button text icon="edit" type="primary" size="small">编辑</el-button>
-        <el-button text icon="remove" type="danger" size="small" @click="handleDel(row)" style="margin: 0">删除</el-button>
+          <el-button text icon="edit" type="primary" size="small">编辑</el-button>
+          <el-button text icon="remove" type="danger" size="small" @click="handleDel(row)" style="margin: 0">删除</el-button>
         </template>
       </el-table-column>
     </el-table>
   </div>
   <div class="pwq-block">
     <el-config-provider :locale="zhCn">
-    <el-pagination
-        v-model:page-size="queryParams.pageSize"
-        v-model:current-change="queryParams.page"
-        class="demonstration"
-        size="small"
-        :page-sizes="[20, 40, 80, 200]"
-        layout="total,prev, pager, next, sizes"
-        :total="total"
-        @current-change="handlePageData"
-        @size-change="handleSizeData"
-    />
+      <el-pagination
+          v-model:page-size="queryParams.pageSize"
+          v-model:current-change="queryParams.page"
+          class="demonstration"
+          size="small"
+          :page-sizes="[20, 40, 80, 200]"
+          layout="total,prev, pager, next, sizes"
+          :total="total"
+          @current-change="handlePageData"
+          @size-change="handleSizeData"
+      />
     </el-config-provider>
   </div>
   <add-users ref="addUser" @callParentMethod="handleLoadSysUserData"></add-users>

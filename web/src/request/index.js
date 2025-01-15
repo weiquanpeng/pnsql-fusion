@@ -90,6 +90,3 @@ instance.interceptors.response.use(function (response) {
 
 export default instance
 
-
-export class loadtaskconfig {
-}
