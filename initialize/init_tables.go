@@ -21,6 +21,7 @@ func RegisterTables() {
 		example.SysUserMenus{},
 		example.TaskConfig{},
 		example.SubTaskConfig{},
+		example.ProcessSubtaskConfig{},
 	)
 	if err != nil {
 		fmt.Println("register table err:", err)

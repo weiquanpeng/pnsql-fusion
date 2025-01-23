@@ -8,7 +8,6 @@ pnsql 全能平台，由研发爱好者peng自研开发
 ```
 npm config set registry=https://registry.npmmirror.com 
 npm install
-npm run prod
 ```
 
 ## Pnsql Installation
@@ -17,6 +16,7 @@ go env -w GO111MODULE=on
 go env -w GOPROXY=https://goproxy.cn,direct
 go mod tidy
 go mod download
+go build -o pnsql main.go
 ```
 
 ## config
@@ -32,8 +32,8 @@ sh -c 'cat <<EOF > /etc/systemd/system/pnsql-web.service
 [Unit]
 Description=PnSql Web Service
 [Service]
-ExecStart=/bin/bash -c "/root/.nvm/versions/node/v23.5.0/bin/npm run prod >> /var/log/pnsql-web.log 2>&1"
-WorkingDirectory=/pnsql/go-project/PnSQL/web
+ExecStart=/bin/bash -c "/root/.nvm/versions/node/v23.5.0/bin/npm run prod >> /data/pnsql-fusion/logs/pnsql-web.log 2>&1"
+WorkingDirectory=/data/pnsql-fusion/web
 Restart=always
 RestartSec=5s
 User=root
@@ -48,8 +48,8 @@ sh -c 'cat <<EOF > /etc/systemd/system/pnsql-server.service
 [Unit]
 Description=PnSql Server Service
 [Service]
-ExecStart=/bin/bash -c "./pnsql >> /var/log/pnsql-server.log 2>&1"
-WorkingDirectory=/pnsql/go-project/PnSQL
+ExecStart=/bin/bash -c "./pnsql >> /data/pnsql-fusion/logs/pnsql-server.log 2>&1"
+WorkingDirectory=/data/pnsql-fusion
 Restart=always
 RestartSec=5s
 User=root

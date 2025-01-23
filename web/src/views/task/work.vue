@@ -36,7 +36,7 @@
         :pagination="pagination"
     >
       <template #columns>
-        <a-table-column title="ID" data-index="id" width:200 align="center">
+        <a-table-column title="ID" data-index="id" :width=100 align="center">
           <template #cell="{ record }">
             <div
                 @click="handleIdOpen(record.id, record.title)"
@@ -45,9 +45,9 @@
             </div>
           </template>
         </a-table-column>
-        <a-table-column title="标题" data-index="title" width:150 align="center"></a-table-column>
-        <a-table-column title="提交人" data-index="owner" width:200 align="center"></a-table-column>
-        <a-table-column title="状态" data-index="status" width:160 align="center">
+        <a-table-column title="标题" data-index="title" align="center"></a-table-column>
+        <a-table-column title="提交人" data-index="owner" align="center"></a-table-column>
+        <a-table-column title="状态" data-index="status" :width=60 align="center">
           <template #cell="{ record }">
       <span v-if="record.status === 'todo'">
         <icon-play-arrow-fill :style="{ fontSize: '25px', color: 'green' }" />
@@ -66,9 +66,9 @@
           </template>
         </a-table-column>
         <a-table-column title="描述" data-index="describe" align=center :ellipsis="true" :tooltip="true"></a-table-column>
-        <a-table-column title="创建时间" data-index="createdAt" width:240 align="center" :sortable="{sortDirections: ['ascend', 'descend']}"></a-table-column>
-        <a-table-column title="更新时间" data-index="updatedAt" width:240 align="center" :sortable="{sortDirections: ['ascend', 'descend']}"></a-table-column>
-        <a-table-column title="操作" align="center" width:150>
+        <a-table-column title="创建时间" data-index="createdAt" :minWidth=300 align="center" :sortable="{sortDirections: ['ascend', 'descend']}"></a-table-column>
+        <a-table-column title="更新时间" data-index="updatedAt" :minWidth=300 align="center" :sortable="{sortDirections: ['ascend', 'descend']}"></a-table-column>
+        <a-table-column title="操作" align="center">
           <template #cell="{ record }">
             <a-button
                 type="primary"
@@ -119,9 +119,19 @@ const searchValue = ref(''); // 当前输入的搜索词
 const taskProcess = ref(null); // 初始化为 null
 
 // 处理 ID 点击事件
-const handleIdOpen = async (id, taskTitle) => {
-  subTaskList.value = await getSubTaskData(id);
-  taskProcess.value.handleClick(subTaskList.value.data.list, taskTitle);
+const handleIdOpen = (id, taskTitle) => {
+  // 第一次调用：打开抽屉并显示骨架屏
+  taskProcess.value.handleClick([], '', taskTitle);
+
+  // 获取子任务数据
+  getSubTaskData(id)
+      .then(response => {
+        // 第二次调用：更新数据
+        taskProcess.value.handleClick(response.data.data, response.data.logs, taskTitle);
+      })
+      .catch(error => {
+        console.error('加载子任务数据失败:', error);
+      });
 };
 
 // 处理 Radio 按钮组变化

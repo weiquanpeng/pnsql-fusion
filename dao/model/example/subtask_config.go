@@ -8,6 +8,7 @@ import (
 type SubTaskConfig struct {
 	global.PvaModel
 	Title        string          `json:"title" gorm:"comment:任务名"`
+	Type         string          `json:"type" gorm:"index;comment:任务函数名"`
 	Owner        string          `json:"owner"  gorm:"index;comment:提交人"`
 	Approve      string          `json:"approve"  gorm:"comment:审批人"`
 	TaskID       uint            `json:"taskID" gorm:"index;comment:主任务ID"`

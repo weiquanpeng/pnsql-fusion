@@ -13,8 +13,10 @@ func (s *SysUserRouter) InitTaskConfigRouter(Router *gin.RouterGroup) {
 	subTaskConfigApi := v1.ApiGroupApp.ExampleApiGroup.SubTaskConfigApi
 	{
 		taskConfigRouter.GET("/list", taskConfigApi.LoadTaskConfigPage)
+		taskConfigRouter.GET("/subtask/list", subTaskConfigApi.GetSubTaskConfigData)
 		taskConfigRouter.POST("/mine/list", taskConfigApi.LoadOwnerTaskConfigPage)
 		taskConfigRouter.POST("/approve/list", subTaskConfigApi.LoadSubTaskConfigPage)
-		taskConfigRouter.GET("/subtask/list", subTaskConfigApi.GetSubTaskConfigData)
+		taskConfigRouter.POST("/log/list", taskConfigApi.LoadOwnerTaskConfigPage)
+		taskConfigRouter.POST("/approve/uptStatus", subTaskConfigApi.UptSubTaskConfigData)
 	}
 }

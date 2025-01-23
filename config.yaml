@@ -2,10 +2,11 @@ zap:
   level: debug
 system:
   port: 2379
+  job-log: "/Users/pengweiquan/pwq/pnsql-fusion/pnsql-task/log"
   #  路由全局前缀
   router-prefix: ""
 mysql:
-  host: "127.0.0.1"
+  host: "8.153.100.186"
   port: "3306"
   dbname: "gin_server"
   username: "pengweiquan"

@@ -1,0 +1,42 @@
+2025-01-21 15:39:22,650 - INFO - UPDATE `task_config` SET `status`=todo WHERE id=1
+2025-01-21 15:39:25,494 - INFO - UPDATE `task_config` SET `status`=todo WHERE id=1
+2025-01-21 15:43:07,033 - INFO - UPDATE `task_config` SET `status`=todo WHERE id=1
+2025-01-21 15:44:20,220 - INFO - UPDATE `task_config` SET `status`=todo WHERE id=1
+2025-01-21 15:52:28,654 - INFO - UPDATE `task_config` SET `status`=todo WHERE id=1
+2025-01-21 16:14:32,715 - INFO - UPDATE `task_config` SET `status`=todo WHERE id=1
+2025-01-21 16:17:02,227 - INFO - UPDATE `task_config` SET `status`=todo WHERE id=1
+2025-01-21 16:31:26,677 - INFO - UPDATE `task_config` SET `status`=todo WHERE id=1
+2025-01-21 16:46:31,239 - INFO - UPDATE `task_config` SET `status`=todo WHERE id=1
+2025-01-21 16:46:44,732 - INFO - UPDATE `task_config` SET `status`=todo WHERE id=1
+2025-01-21 16:54:37,030 - ERROR - 插入子任务数据失败: 执行失败，重试次数已达到上限。
+2025-01-21 16:55:09,387 - INFO - UPDATE `task_config` SET `status`=todo WHERE id=1
+2025-01-21 16:57:32,893 - INFO - UPDATE `task_config` SET `status`=todo WHERE id=1
+2025-01-21 17:06:28,866 - INFO - UPDATE `task_config` SET `status`=todo WHERE id=1
+2025-01-21 17:30:12,705 - INFO - UPDATE `task_config` SET `status`=todo WHERE id=1
+2025-01-21 17:30:41,772 - INFO - UPDATE `task_config` SET `status`=todo WHERE id=1
+2025-01-21 17:37:46,081 - INFO - UPDATE `task_config` SET `status`=todo WHERE id=1
+2025-01-21 17:38:38,463 - ERROR - 插入子任务数据失败: list indices must be integers or slices, not str
+2025-01-21 17:38:40,591 - ERROR - 插入子任务数据失败: list indices must be integers or slices, not str
+2025-01-21 17:38:42,704 - ERROR - 插入子任务数据失败: list indices must be integers or slices, not str
+2025-01-21 17:38:45,280 - ERROR - 插入子任务数据失败: list indices must be integers or slices, not str
+2025-01-21 17:38:47,861 - ERROR - 插入子任务数据失败: list indices must be integers or slices, not str
+2025-01-21 17:38:50,145 - ERROR - 插入子任务数据失败: list indices must be integers or slices, not str
+2025-01-21 17:38:52,261 - ERROR - 插入子任务数据失败: list indices must be integers or slices, not str
+2025-01-21 17:38:54,748 - ERROR - 插入子任务数据失败: list indices must be integers or slices, not str
+2025-01-21 17:38:57,541 - ERROR - 插入子任务数据失败: list indices must be integers or slices, not str
+2025-01-21 17:39:00,026 - ERROR - 插入子任务数据失败: list indices must be integers or slices, not str
+2025-01-21 17:39:02,731 - ERROR - 插入子任务数据失败: list indices must be integers or slices, not str
+2025-01-21 17:39:05,138 - ERROR - 插入子任务数据失败: list indices must be integers or slices, not str
+2025-01-21 17:39:07,487 - ERROR - 插入子任务数据失败: list indices must be integers or slices, not str
+2025-01-21 17:39:09,596 - ERROR - 插入子任务数据失败: list indices must be integers or slices, not str
+2025-01-21 17:39:11,700 - ERROR - 插入子任务数据失败: list indices must be integers or slices, not str
+2025-01-21 17:39:14,363 - ERROR - 插入子任务数据失败: list indices must be integers or slices, not str
+2025-01-21 17:39:16,969 - ERROR - 插入子任务数据失败: list indices must be integers or slices, not str
+2025-01-21 17:39:19,449 - ERROR - 插入子任务数据失败: list indices must be integers or slices, not str
+2025-01-21 17:39:21,867 - ERROR - 插入子任务数据失败: list indices must be integers or slices, not str
+2025-01-21 17:39:24,296 - ERROR - 插入子任务数据失败: list indices must be integers or slices, not str
+2025-01-21 17:39:26,832 - ERROR - 插入子任务数据失败: list indices must be integers or slices, not str
+2025-01-21 17:39:29,419 - ERROR - 插入子任务数据失败: list indices must be integers or slices, not str
+2025-01-21 17:41:01,678 - ERROR - 插入子任务数据失败: list indices must be integers or slices, not str
+2025-01-21 17:41:04,347 - ERROR - 插入子任务数据失败: list indices must be integers or slices, not str
+2025-01-21 17:45:38,732 - INFO - UPDATE `task_config` SET `status`=todo WHERE id=1
